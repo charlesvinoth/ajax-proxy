@@ -82,6 +82,7 @@ server.post(
 )
 
 const port = Number(process.env.PORT) || 3000
+console.log(port)
 server.listen({ port }, (err, address) => {
   if (err) {
     server.log.error(err)
