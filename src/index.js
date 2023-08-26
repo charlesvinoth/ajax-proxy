@@ -73,8 +73,9 @@ server.post('/login', async (request, reply) => {
     }
 });
 const port = Number(process.env.PORT) || 3000;
+const host = 'RENDER' in process.env ? '0.0.0.0' : 'localhost';
 console.log(port);
-server.listen({ port }, (err, address) => {
+server.listen({ host, port }, (err, address) => {
     if (err) {
         server.log.error(err);
         process.exit(1);
