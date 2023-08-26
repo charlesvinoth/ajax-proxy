@@ -4,7 +4,7 @@ import helmet from '@fastify/helmet'
 import httpProxy from '@fastify/http-proxy'
 import axios from 'axios'
 import { axiosInstance } from './api/axios'
-import { createHash } from 'node:crypto'
+import { createHash } from 'crypto'
 
 let sessionToken: string = ''
 let refreshToken: string = ''
