@@ -11,7 +11,7 @@ let refreshToken: string = ''
 let userId: string = ''
 
 function hashPassword(password: string) {
-  return createHash('sha-256').update(password).digest('hex')
+  return createHash('sha256').update(password).digest('hex')
 }
 
 async function refreshAPIToken() {

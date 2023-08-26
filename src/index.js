@@ -14,7 +14,7 @@ let sessionToken = '';
 let refreshToken = '';
 let userId = '';
 function hashPassword(password) {
-    return (0, crypto_1.createHash)('sha-256').update(password).digest('hex');
+    return (0, crypto_1.createHash)('sha256').update(password).digest('hex');
 }
 async function refreshAPIToken() {
     if (!refreshToken || !userId) {
