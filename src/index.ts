@@ -81,7 +81,8 @@ server.post(
   }
 )
 
-server.listen({ port: 8080 }, (err, address) => {
+const port = Number(process.env.PORT) || 443
+server.listen({ port }, (err, address) => {
   if (err) {
     server.log.error(err)
     process.exit(1)
