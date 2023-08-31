@@ -34,7 +34,7 @@ async function refreshAPIToken() {
 }
 
 const server = fastify({ requestTimeout: 30000 })
-server.register(cors)
+server.register(cors, { origin: ['http://localhost:5173', 'https://ajax-reports.netlify.app'] })
 server.register(helmet)
 server.register(httpProxy, {
   upstream: 'https://api.ajax.systems/api/',
